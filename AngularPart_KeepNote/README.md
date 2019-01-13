@@ -2,7 +2,7 @@
 
 ## Objective 
 
-The Objective of this level of Keep is to cover the following areas :  
+The Objective of this KeepNote application is to cover the following areas :  
 
 - Components Design  
 - Components Interaction  
@@ -11,9 +11,9 @@ The Objective of this level of Keep is to cover the following areas :
 
 ## Prerequisites
 
-1. Clone the boilerplate repository and cd into it  
+1. Clone the repository and cd into it  
 2. Install dependencies `npm install`  
-3. Run the backend spring boot part  
+3. Run the backend spring boot part //5 servers for each microservices (notes,category,reminder,user,user_auth)  
 4. Run the frontend `npm run start` which shall run on port:4200 
 
 ## Know your server  
