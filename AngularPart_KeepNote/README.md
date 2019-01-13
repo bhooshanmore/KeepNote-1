@@ -1,4 +1,4 @@
-# Angular Assignment - Keep	Level 3
+# Angular Assignment - KeepNote
 
 ## Objective 
 
@@ -11,11 +11,10 @@ The Objective of this level of Keep is to cover the following areas :
 
 ## Prerequisites
 
-1. Fork this boilerplate repository  
-2. Clone the boilerplate repository and cd into it  
-3. Install dependencies `npm install`  
-4. Run the backend `npm run serve`  which shall run on port:3000  
-5. Run the frontend `npm run start` which shall run on port:4200 
+1. Clone the boilerplate repository and cd into it  
+2. Install dependencies `npm install`  
+3. Run the backend spring boot part  
+4. Run the frontend `npm run start` which shall run on port:4200 
 
 ## Know your server  
 
@@ -26,19 +25,18 @@ On running `npm run serve`, following apis would be available for your use -
 4. To add a note - POST - http://localhost:3000/api/v1/notes - expecting header - { 'Authorization', `Bearer ${token}` } and data - { note } 
 
 
-## Assignment:	
+## Features:	
 	
 Keep to include following -  
 1. Notes View - collection of notes  
-2. List View - collection of notes but classified into three lists based on their `state` values  
+2. List View - collection of notes is classified into three lists based on their `state` values  
 	- Not Started  
 	- Started  
 	- Completed  
-3. Edit Note View - Both the NotesView and the ListView should be able to edit notes and should be able to update the list and notes view.  
-4. Note Taker Component: Both the NotesView and the ListView should have a common NoteTakerComponent present in the DashboardComponent.  
-5. Add more Unit test cases for all the Components.  
-6. Add Unit test cases for all the Services.  
-7. Add more E2E test cases to the application.    
+3. Edit Note View - Both the NotesView and the ListView can be used to edit notes and update the list and notes view.  
+4. Note Taker Component: Both the NotesView and the ListView have a common NoteTakerComponent present in the DashboardComponent.
+5. Category - Each note can have one category
+6. Reminder - Each can have ,multiple reminder
 
 ## Instructions:  
 
@@ -66,7 +64,7 @@ Keep to include following -
 16. `NotesService` with two properties -> `notes` which is array of all the updated notes and `notesSubject` which is a BehaviourSubject of array of all updated notes and helps to emit changes to this array across subscribers, the service has methods as below -  
 	16.1. `fetchNotesFromServer()` to fetch notes from backend and update the `notes` and `notesSubject` likewise in the service  
 		INPUT - no params  
-		URL - `http://localhost:3000/api/v1/notes`  
+		URL - `http://localhost:3000/api/v1/notes`  //backend url
 		METHOD - `GET`  
 		RETURN TYPE - void  
 	16.2. `getNotes()` to return the `notesSubject` of the service  
@@ -74,12 +72,12 @@ Keep to include following -
 		RETURN TYPE - `BehaviorSubject<Array<Note>>`  
 	16.3. `addNote()` to persist the new note created with server and update the `notes` and `notesSubject` of the service  
 		INPUT - Note  
-		URL - `http://localhost:3000/api/v1/notes`  
+		URL - `http://localhost:3000/api/v1/notes`  //backend url
 		METHOD - `POST`  
 		RETURN TYPE - `Observable<Note>`  
 	16.4. `editNote()` to persist the updated note with server and update the `notes` and `notesSubject` of the service  
 		INPUT - Note  
-		URL - `http://localhost:3000/api/v1/notes/${note.id}`  
+		URL - `http://localhost:3000/api/v1/notes/${note.id}`  //backend url
 		METHOD - `PUT`  
 		RETURN TYPE - `Observable<Note>`  
 	16.5. `getNoteById()` to fetch the note matching provided Id from `notes` collection of the service  
@@ -92,24 +90,5 @@ Keep to include following -
 	17.4. `routeBack()` to navigate back to previous route  
 	17.5. `routeToNoteView()` to navigate to notes view  
 	17.6. `routeToListView()` to navigate to list view  
-18. Ensure following commands succeed in your local machine before submitting your code for Preliminary automated review as described next -  
-`npm install
-npm run build
-npm run lint
-`
-19. Ensure unit test cases pass -  
-`npm run test
-`
-20. Ensure e2e test cases pass -  
-`npm run serve` (backend shall be running before executing e2e test cases)  
-`npm run e2e`
-
-## Submitting your solution for preliminary automated review  
-1. Open `https://hobbes-cts.stackroute.in/#/` and login into the platform  
-2. Under `Assignment repository` select `angular-keep-level-3-assignment`, and branch `master`  
-3. Under `Your solution repository` select your own repository and branch
-4. Press `Submit`  
-5. Press `click here` for the feedback  
-6. Evaluation will take around 5 mins to complete after which you need to refresh your browser and get the updated status  
-7. Watch out for your total score and detailed status on each test and eslint errors in the coloured blocks on the screen  
-8. Fix failing test cases as well as eslint errors and re-submit your solution (you may skip any eslint errors reported in the provided spec files)  
+18. Category Component
+19. Reminder Component
