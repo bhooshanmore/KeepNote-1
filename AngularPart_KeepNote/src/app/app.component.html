@@ -1,0 +1,29 @@
+<!-- HeaderComponent to be displayed as part of AppComponent -->
+<app-header></app-header>
+
+<!-- Login/Dashboard component to be rendered based on route -->
+
+<button mat-button [matMenuTriggerFor]="menu"><mat-icon class="maticon">menu</mat-icon>Menu</button>
+<mat-menu #menu="matMenu">
+
+     
+      <button class="note" mat-menu-item (click)="routeToNoteView()">
+            <mat-icon class="maticon">note</mat-icon>
+            Notes &nbsp;
+      </button>
+      <mat-divider></mat-divider>
+      <button class="note" mat-menu-item (click)="routeToReminder()">
+            <mat-icon class="maticon">alarm</mat-icon>
+            Reminder &nbsp;
+      </button>
+      <mat-divider></mat-divider>
+      <button class="category" mat-menu-item (click)="routeToCategory()">
+            <mat-icon class="maticon">notes</mat-icon>
+            Category 
+       </button>
+      
+      <!-- <app-category matInput [category]="category" *ngFor="let category of categories"></app-category> -->
+
+      
+</mat-menu>
+<router-outlet></router-outlet>

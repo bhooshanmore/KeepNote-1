@@ -1,0 +1,13 @@
+/* .cards{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin:15vh auto;
+    justify-content: space-around;
+    flex-flow: row wrap;
+} */
+.reminder-form-container{
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+}

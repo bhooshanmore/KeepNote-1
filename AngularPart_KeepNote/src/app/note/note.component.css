@@ -1,0 +1,35 @@
+/* .notes-card{
+    width:80vw;
+    margin:10vh 20vw;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+} */
+.note-size{
+    height:30vh;
+    width:20vw;
+    margin:1em;
+}
+
+.note-card{
+    min-width: 20vh;
+    min-height: 35vh;
+    margin:1em;
+    border-radius: .45rem;
+  }
+  .card-text, h3, mat-card-title, .category, .reminder {
+    font-family: 'Montserrat', sans-serif;
+}
+.reminder{
+    color: rgb(228, 42, 9);
+    font-size: 0.8em;
+}
+.category{
+  font-size: 1em;
+  color:rgb(18, 14, 235);
+}
+
+.menu-menu{
+  float: right;
+  
+}

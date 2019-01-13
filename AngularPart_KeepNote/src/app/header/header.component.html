@@ -1,0 +1,31 @@
+<mat-toolbar>Keep
+	<div>
+		<!-- <button mat-button (click)="routeToNoteView()">NOTE</button>
+		<button mat-button (click)="routeToCategory()">CATEGORY</button>
+		<button mat-button (click)="routeToReminder()">REMINDER</button> -->
+	</div>
+	<div class="keep-c-toggle-view">
+		<i *ngIf="isNoteView" class="material-icons switchToListView" (click)="routeToListView()">view_list</i>
+		<i *ngIf="!isNoteView" class="material-icons switchToNoteView" (click)="routeToNoteView()">view_quilt</i>
+		<!-- <div class="btn-group">
+			<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				{{userId}}
+			</button>
+			<div class="dropdown-menu">
+				<a class="dropdown-item" (click)="routeToUserDetails()">My Profile</a>
+				<br>
+				<a class="dropdown-item" class="logout" (click)="logoutUser()">Logout</a>
+			</div>
+		</div> -->
+		<div class="btn-group">
+				<button type="button"  class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					{{userId}}
+				</button>
+				<div class="dropdown-menu">
+					<a class="dropdown-item" (click)="routeToUserDetails()">Profile</a>
+					<br>
+					<a class="dropdown-item" (click)="logoutUser()">Logout</a>
+				</div>
+			</div>
+	</div>
+</mat-toolbar>

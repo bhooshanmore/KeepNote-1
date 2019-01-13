@@ -1,0 +1,13 @@
+spring:
+  data:
+    mongodb:
+ #     authentication-database:
+      #username: chandan
+      #password: root
+      database: userDb
+      port: 27017
+      host: localhost
+  application:
+    name: category-service
+server:
+  port: 8083

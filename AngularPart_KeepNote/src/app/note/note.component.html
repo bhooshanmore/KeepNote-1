@@ -1,0 +1,21 @@
+<div class="note-card">
+    <mat-card class="cards" >
+     <div class="todelete"  (click)="openEditNoteView()">  
+        <mat-card-title>{{note.noteTitle}}</mat-card-title>
+        <mat-card-content>{{note.noteContent}}</mat-card-content>
+        <mat-card-content>{{note.noteStatus}}</mat-card-content>
+        <mat-card-content  class="category" >Category: {{note.category.categoryName}}</mat-card-content>
+        <div *ngIf="note.reminders"></div>
+        <mat-card-content *ngIf=note.reminder> 
+            <b>Reminder : </b>
+        </mat-card-content>
+        <div class="reminder" *ngFor="let reminder of note.reminders">
+                &nbsp;<span class="glyphicon glyphicon-time"></span> 
+                <mat-card-content>{{reminder.reminderName}}</mat-card-content>
+        </div>
+    </div>   
+    <span class="glyphicon glyphicon-trash " (click)="deleteNote()"></span>
+        <!-- <span class="glyphicon glyphicon-edit edit" (click)="openEditNoteView()"></span> -->
+    </mat-card>
+    
+</div>

@@ -1,0 +1,19 @@
+/* 
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: space-around;
+} */
+
+.keep-c-note-container{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin:15vh auto;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}

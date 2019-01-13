@@ -1,0 +1,112 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "title": "Read Angular6 blog12345",
+      "text": "Shall do at 6 pm",
+      "state": "started"
+    },
+    {
+      "id": 2,
+      "title": "Call Ravi123",
+      "text": "Track the new submissions",
+      "state": "started"
+    },
+    {
+      "title": "Capitalism",
+      "text": "Mark Twain",
+      "id": 3,
+      "state": "completed"
+    },
+    {
+      "title": "sghfdhdftfv123",
+      "text": "dhrstjs",
+      "state": "not-started",
+      "id": 4
+    },
+    {
+      "title": "kheuifhj",
+      "text": "hgiugln",
+      "state": "not-started",
+      "id": 5
+    },
+    {
+      "title": "jnbkuikb",
+      "text": "sdnbiuykjnse",
+      "state": "not-started",
+      "id": 6
+    },
+    {
+      "title": "lghuihvbi",
+      "text": "sgvuygjbiou",
+      "state": "not-started",
+      "id": 7
+    },
+    {
+      "title": "swedha",
+      "text": "bvufyk",
+      "state": "not-started",
+      "id": 8
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 9
+    },
+    {
+      "title": "Read Angular 5 blog",
+      "text": "Shall do at 6 pm",
+      "state": "not-started",
+      "id": 10
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 11
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 12
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 13
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 14
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 15
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 16
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 17
+    },
+    {
+      "title": "Read Angular 1 blog",
+      "text": "Shall do at 10.30 pm",
+      "state": "not-started",
+      "id": 18
+    }
+  ]
+}

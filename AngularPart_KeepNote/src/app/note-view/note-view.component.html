@@ -1,0 +1,16 @@
+<!-- <div>
+	<button type="button" class="btn btn-default btn-sm" (click)="removeAllNotes()">
+		<span class="glyphicon glyphicon-remove"></span> Remove All
+	</button>
+</div> -->
+
+<div class="keep-c-note-container">
+		<!--<div class="notes-card-container">-->
+		<!-- Include the notes collection with each note rendered as a separate NoteComponent -->
+		<h3>{{errorMessage}}</h3>    
+	
+	<app-note [note]="note" *ngFor="let note of notes"></app-note>		
+	
+</div>
+
+<!-- Include the notes collection with each note rendered as a separate NoteComponent -->

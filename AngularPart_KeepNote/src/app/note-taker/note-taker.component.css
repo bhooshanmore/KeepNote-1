@@ -1,0 +1,9 @@
+.note-expansion-panel{
+    width:60vw;
+    margin:10vh 20vw;
+}
+  
+.note-form-field{
+    display: flex;
+    flex-direction: column;
+}

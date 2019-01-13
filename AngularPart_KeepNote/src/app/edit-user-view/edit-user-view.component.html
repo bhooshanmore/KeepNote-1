@@ -1,0 +1,16 @@
+<label class="error-message">{{ errMessage }}</label>
+<form (ngSubmit)="onSave()">
+<mat-form-field>
+  <input [(ngModel)]="user.userName" name="userName" matInput placeholder="User name" type="text">
+</mat-form-field>
+<mat-form-field>
+  <textarea [(ngModel)]="user.userMobile" name="userMobile" matInput placeholder="Mobile number"></textarea>
+</mat-form-field>
+<mat-form-field>
+  <input [(ngModel)]="user.userRole" name="userRole" matInput placeholder="Select Role" type="text">
+</mat-form-field>
+
+<div class="keep-c-done-wrapper">
+  <button class="note-fields" mat-button >Save</button>
+</div>
+</form>

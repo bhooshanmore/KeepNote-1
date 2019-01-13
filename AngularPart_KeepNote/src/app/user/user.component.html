@@ -1,0 +1,14 @@
+<div class="keep-c-list-container">
+  <mat-card class="cards-layout">
+      <mat-card-content>Name: {{user.userName}}</mat-card-content>
+      <mat-card-content>PhoneNumber: {{user.userMobile}}</mat-card-content>
+      <mat-card-content>CreatedAt: {{user.userAddedDate}}</mat-card-content>
+
+      <button class="delete" mat-button >
+          <mat-icon class="maticon" (click)="deleteUser()">delete</mat-icon>
+        </button>
+        <button class="edit" mat-button (click)="updateUser()">
+          <mat-icon class="maticon">edit</mat-icon>
+        </button>
+  </mat-card>
+</div>

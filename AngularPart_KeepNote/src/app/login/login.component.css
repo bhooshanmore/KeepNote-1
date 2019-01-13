@@ -1,0 +1,46 @@
+.login-form-container {
+    text-align: center;
+}
+.button {
+    color: green;
+}
+
+.login-card{
+    
+    height: 30%;
+    
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.center{
+width: 30%;
+margin: 10px auto;
+}
+
+.form-login{
+display: flex;
+flex-direction: column;
+}
+
+.form-header{
+  text-align: center;
+}
+
+.button-css{
+  background-color: rgb(61, 178, 32);
+  width: 20%;
+ 
+}
+
+.center-button{
+  text-align: center;
+}
+
+.signup-css{
+  
+  background-color: rgb(32, 178, 64);
+  width: 35%;
+  text-align: left;
+}

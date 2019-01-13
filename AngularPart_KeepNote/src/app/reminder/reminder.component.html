@@ -1,0 +1,53 @@
+<label class="error-message">{{ errMessage }}</label>
+
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      Reminder
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <div class="reminder-form-container">
+    <mat-form-field>
+      <input matInput placeholder="Reminder Name" name="reminderName" [formControl]="reminderName">
+      <mat-error *ngIf="reminderName.required && reminderName.touched">Reminder Name required</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <textarea matInput placeholder="Reminder Description" name="reminderDescription" [formControl]="reminderDescription"></textarea>
+      <mat-error *ngIf="reminderDescription.required && reminderDescription.touched">Reminder Description required</mat-error>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput placeholder="Reminder Type" name="reminderType" [formControl]="reminderType">
+      <mat-error *ngIf="reminderType.required && reminderType.touched">reminderType required</mat-error>
+    </mat-form-field><br>
+    <button mat-button (click)="createReminder()">Submit</button>
+  </div>
+</mat-expansion-panel>
+
+<div class="card-container">
+  <div class="card col-12">
+    <mat-card class="cards">
+      <div *ngFor="let reminder of reminderArr">
+
+        <!-- <span class="glyphicon glyphicon-remove" (click)="deleteReminder(reminder.reminderId)"></span>
+        <span class="glyphicon glyphicon-edit" (click)="updateReminder(reminder.reminderId)"></span> -->
+        <mat-card-content (click)="routeToNotes(reminder.reminderId)">Reminder Name: {{reminder.reminderName}}<Br>Reminder Type :{{reminder.reminderType}}</mat-card-content>
+        <!-- <mat-card-content>reminderDescription: {{reminder.reminderDescription}}</mat-card-content>
+        <mat-card-content>reminderType: {{reminder.reminderType}}</mat-card-content>
+        <mat-card-content>reminderCreatedBy: {{reminder.reminderCreatedBy}}</mat-card-content>
+        <mat-card-content>reminderCreationDate: {{reminder.reminderCreationDate}}</mat-card-content> -->
+        <button class="delete" mat-button (click)="deleteReminder(reminder.reminderId)">
+            <mat-icon class="maticon">delete</mat-icon>
+          </button>
+          <button class="edit" mat-button (click)="updateReminder(reminder.reminderId)">
+            <mat-icon class="maticon">edit</mat-icon>
+          </button>
+      
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+<router-outlet name="reminderEditOutlet"></router-outlet>
+<router-outlet></router-outlet>

@@ -1,0 +1,79 @@
+<!-- Label to display any error messages -->
+<label class="error-message">{{ errMessage }}</label>
+
+
+<mat-form-field> 
+  <input [(ngModel)]="note.noteTitle" name="editTitle" matInput placeholder="Title" type="text">
+</mat-form-field><br>
+<mat-form-field>
+  <textarea [(ngModel)]="note.noteContent" name="editText" matInput placeholder="Text"></textarea>
+</mat-form-field><br>
+<mat-form-field>
+  <mat-select [(ngModel)]="note.noteStatus" name="noteStatus" placeholder="Select status" >
+    <mat-option *ngFor="let state of status" [value]="state">
+      {{ state }}
+    </mat-option>
+  </mat-select>
+</mat-form-field><br>
+<div>
+  <label>category</label>
+  <mat-select  [(ngModel)]="note.category" name="category" placeholder="Select category">
+    <mat-option *ngFor="let category of categories" [value]="category" >
+      {{category.categoryName}}
+    </mat-option>
+  </mat-select>
+</div>
+<br>
+<label>Reminders:</label>
+<div class="checkbox" *ngFor="let reminder of reminders">
+  <input type="checkbox" value="{{reminder}}" [checked]="isChecked(reminder)" (change)="onChange(reminder,$event)">
+  {{reminder.reminderName}}
+</div> 
+<!-- <mat-form-field>
+  <mat-select placeholder="Reminder" [(ngModel)]="selectedReminders" multiple>
+    <mat-option *ngFor="let reminder of reminders" [value]="reminder.reminderId">{{reminder.reminderName}}</mat-option>
+  </mat-select>
+</mat-form-field> -->
+
+<div class="keep-c-done-wrapper">
+  <button mat-button (click)="onSave()">Save</button>
+</div>
+
+
+
+
+
+<!-- Label to display any error messages
+<label class="error-message">{{ errMessage }}</label>
+
+<div class="note-form-container">
+<mat-form-field> 
+  <input [(ngModel)]="note.noteTitle" name="editTitle" matInput placeholder="Title" type="text">
+</mat-form-field>
+<mat-form-field>
+  <textarea [(ngModel)]="note.noteContent" name="editText" matInput placeholder="Text"></textarea>
+</mat-form-field>
+<mat-form-field>
+  <mat-select [(ngModel)]="note.noteStatus" name="noteStatus" placeholder="Select status" >
+    <mat-option *ngFor="let state of status" [value]="state">
+      {{ state }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<div>
+  <label>category</label>
+  <select placeholder="Select category" [(ngModel)]="note.category" name="category">
+    <option *ngFor="let category of categories" [value]="category" [selected]="note.category.categoryId == category.id">
+      {{category.categoryName}}
+    </option>
+  </select>
+</div>
+<br>
+<label>Reminders:</label>
+<div class="checkbox" *ngFor="let reminder of reminders">
+  <input type="checkbox" value="{{reminder}}" [checked]="isChecked(reminder)" (change)="onChange(reminder,$event)">{{reminder.reminderName}}
+</div>
+</div>
+<div class="keep-c-done-wrapper">
+  <button mat-button (click)="onSave()">Save</button>
+</div> -->

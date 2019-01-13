@@ -1,0 +1,53 @@
+<label class="error-message">{{ errMessage }}</label>
+
+<div class="category-expansion-panel">
+  <mat-accordion>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Create category
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="category-expansion-form-fields">
+        <form action="" (ngSubmit)="createCategory()">
+          <mat-form-field>
+            <input matInput placeholder="categoryName" name="categoryName" [formControl]="categoryName">
+            <mat-error *ngIf="categoryName.required && categoryName.touched">categoryName is Required</mat-error>
+          </mat-form-field><br>
+          <mat-form-field>
+            <textarea matInput placeholder="categoryDescription" name="categoryDescription" [formControl]="categoryDescription"></textarea>
+            <mat-error *ngIf="categoryDescription.required && categoryDescription.touched">categoryDescription is
+              Required</mat-error>
+          </mat-form-field><br>
+          <button mat-button>Done</button>
+        </form>
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div>
+
+<div class="keep-c-list-container">
+  <div class="card col-12 ">
+
+
+    <mat-card class="cards-layout" *ngFor="let category of categoryArr">
+      <!-- <span class="glyphicon glyphicon-remove remove" (click)="deleteCategory(category.id)"></span> -->
+
+      <!-- <span class="glyphicon glyphicon-edit edit" (click)="updateCategory(category.id)"></span> -->
+      <mat-card-content (click)="routeToNotes(category.id)">Category Name: {{category.categoryName}}<br> Category Descriptiion: {{category.categoryDescription}}</mat-card-content>
+      <!-- <mat-card-content>Description: {{category.categoryDescription}}</mat-card-content>
+      <mat-card-content>CreatedAt: {{category.categoryCreationDate}}</mat-card-content>
+      <mat-card-content>createdBy: {{category.categoryCreatedBy}}</mat-card-content> -->
+      <button class="delete" mat-button (click)="deleteCategory(category.id)">
+        <mat-icon class="maticon">delete</mat-icon>
+      </button>
+      <button class="edit" mat-button (click)="updateCategory(category.id)">
+        <mat-icon class="maticon">edit</mat-icon>
+      </button>
+
+    </mat-card>
+  </div>
+</div>
+
+<router-outlet name="categoryEditOutlet"></router-outlet>
+<router-outlet></router-outlet>
